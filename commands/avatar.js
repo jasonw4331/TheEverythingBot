@@ -14,10 +14,14 @@ module.exports = {
 			return message.channel.send({ embed: exampleEmbed });
 		}
 
-		const avatarList = message.mentions.users.map(user => {
-			return `${user.username}'s avatar: <${user.displayAvatarURL({ dynamic: true })}>`;
+		message.mentions.users.forEach(user => {
+			const exampleEmbed = {
+				title: user.username,
+				image: {
+					url: user.displayAvatarURL({ dynamic: true }),
+				},
+			};
+			message.channel.send({ embed: exampleEmbed });
 		});
-
-		message.channel.send(avatarList);
 	},
 };
