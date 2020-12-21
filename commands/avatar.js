@@ -4,7 +4,14 @@ module.exports = {
 	aliases: ['icon', 'pfp'],
 	execute(message) {
 		if (!message.mentions.users.size) {
-			return message.channel.send(`Your avatar: <${message.author.displayAvatarURL({ dynamic: true })}>`);
+			const exampleEmbed = {
+				title: message.author.name,
+				image: {
+					url: message.author.displayAvatarURL({ format: 'png', dynamic: true }),
+				},
+			};
+
+			return message.channel.send({ embed: exampleEmbed });
 		}
 
 		const avatarList = message.mentions.users.map(user => {
