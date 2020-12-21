@@ -1,0 +1,30 @@
+{
+  "name": "theeverythingbot",
+  "version": "1.0.0",
+  "description": "A bot my The Everything Discord Server",
+  "main": "bot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jasonwynn10/TheEverythingBot.git"
+  },
+  "keywords": [
+    "discord",
+    "bot"
+  ],
+  "author": "jasonwynn10",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/jasonwynn10/TheEverythingBot/issues"
+  },
+  "homepage": "https://github.com/jasonwynn10/TheEverythingBot#readme",
+  "dependencies": {
+    "discord.js": "^12.5.1",
+    "dotenv": "^8.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.16.0"
+  }
+}
